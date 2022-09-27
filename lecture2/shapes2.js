@@ -43,6 +43,7 @@ p.init(10, 20);
 document.writeln( "Point p = " + p );
 document.writeln( "p's area = " + p.area() );
 console.log( Object.getPrototypeOf(p) );
+console.log(p.Prototype);
 
 var c = Object.create(Circle);
 c.init(20, 30, 5);
