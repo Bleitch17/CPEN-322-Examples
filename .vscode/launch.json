@@ -1,6 +1,15 @@
 {
     "configurations": [
         {
+            "name": "Launch inheritance-object-create",
+            "program": "${workspaceFolder}/in-class-exercises/inheritance-object-create.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
             "name": "http://127.0.0.1:5500/lecture3/higher-order.html",
             "request": "launch",
             "type": "chrome",
