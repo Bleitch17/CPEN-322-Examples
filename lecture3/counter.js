@@ -65,7 +65,7 @@ console.log( m.getValues() );
 function MakeCounters(n) {
 	var counters = [];
 	for (var i=0; i<n; i++) {
-		var val = i;
+		var val = i; // One copy of val: using let would fix the issue. Using var has the effect of hoisting val to the top of the function, and all the closures in the array remember the same variable.
 		counters[i] = {
 			increment: function() { val++; },
  			get: function() { return val; },
@@ -78,6 +78,6 @@ function MakeCounters(n) {
 var m = MakeCounters(10);
 for (var i=0; i<10; i++) {
 	console.log(m[i]);
-    document.writeln("Counter[ " + i + "] = " + m[i].get());
+    console.log("Counter[ " + i + "] = " + m[i].get());
 }
 	
